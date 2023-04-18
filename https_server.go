@@ -49,7 +49,7 @@ func handlerUpgrade(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", handlerUpgrade)
-	log.Println("start http listening :18443")
-	err := http.ListenAndServeTLS("localhost:18443", "server.crt", "server.key", nil)
+	log.Println("start http listening :18888")
+	err := http.ListenAndServe("localhost:18888", nil)
 	log.Println(err)
 }
